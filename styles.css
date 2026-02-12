@@ -1,0 +1,23 @@
+#main {
+    margin: 10px;
+    align-items: center;
+    background-color:gray;
+    font-family: serif;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    display: flex;
+    gap: 1%;
+    height: auto;
+}
+
+#img_perfil {
+    margin: auto;
+    border-top-right-radius: 55%;   
+    background-color: brown;
+    
+}
+
+#texto_perfil {
+    background-color: beige;
+    text-align: right;
+}
