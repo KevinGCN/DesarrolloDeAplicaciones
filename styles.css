@@ -82,3 +82,50 @@ body{
 .navbar a:hover {
     color: #c7a86b;
 }
+
+/*Bloque 1*/
+#bloque_1 {
+    display: flex;
+    border-radius: 15px;
+    border: 3px solid black;
+    gap: 10%;
+}
+#contacto {
+    display: 1;
+    background: #503822;
+    padding-left: 3%;
+    padding-right: 8%;
+}
+/*Bloque 2*/
+#bloque_2 {
+    display: flex;
+    border-radius: 15px;
+    border: 3px solid black;
+    gap: 10%;
+}
+#idiomas {
+    display: 1;
+    background: #856343;
+    padding-left: 3%;
+    padding-right: 14%;
+}
+#experiencia {
+    margin: 0;
+}
+#experiencia h4{
+    display: flex;
+}
+
+/*Bloque 3*/
+#bloque_3 {
+    display: flex;
+    border-radius: 15px;
+    border: 3px solid black;
+    gap: 10%;
+}
+#referencias {
+    display: 1;
+    background: #503822;
+    padding-left: 3%;
+    padding-right: 15%;
+}
