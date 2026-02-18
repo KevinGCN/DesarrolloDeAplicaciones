@@ -1,67 +1,21 @@
-body{
-    background: #e5e5e5;
-    font-family: "Times New Roman", serif;
-}
-
-/*bloque presentacion*/
-/* bloque presentacion */
-#main {
-    margin: 1%;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background-color: gray;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* contenedor imagen */
-#img_perfil {
-    flex: 0 0 150px; /* tamaño fijo */
-}
-
-/* imagen responsive */
-#img_perfil img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    border: 4px solid #333;
-}
-
-/* contenedor texto */
-#texto_perfil {
-    flex: 1; /* ocupa espacio restante */
-    background-color: beige;
-    padding: 20px;
-    border-radius: 15px;
-    border: 3px solid #333;
-}
-
-/* nombre */
-#texto_perfil h1 {
+/* ===== RESET BASICO ===== */
+* {
     margin: 0;
-    font-size: 32px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* apellido */
-#texto_perfil h1 span {
-    display: block;
-    font-size: 24px;
-    font-weight: normal;
-    color: #555;
+/* fuente general */
+body {
+    background: #e5e5e5;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5;
 }
 
-/* descripción */
-#texto_perfil p {
-    margin-top: 10px;
-}
-
-
-/*scroll*/
-/* Barra fija arriba */
+/* ===== NAVBAR ===== */
 .navbar {
     position: sticky;
-    top: 1px;
+    top: 0;
     background: #525252;
     padding: 15px;
     display: flex;
@@ -70,7 +24,6 @@ body{
     z-index: 1000;
 }
 
-/* Links */
 .navbar a {
     color: white;
     text-decoration: none;
@@ -78,54 +31,166 @@ body{
     transition: 0.3s;
 }
 
-/* Hover elegante */
 .navbar a:hover {
     color: #c7a86b;
 }
 
-/*Bloque 1*/
-#bloque_1 {
-    display: flex;
-    border-radius: 15px;
-    border: 3px solid black;
-    gap: 10%;
-}
-#contacto {
-    display: 1;
-    background: #503822;
-    padding-left: 3%;
-    padding-right: 8%;
-}
-/*Bloque 2*/
-#bloque_2 {
-    display: flex;
-    border-radius: 15px;
-    border: 3px solid black;
-    gap: 10%;
-}
-#idiomas {
-    display: 1;
-    background: #856343;
-    padding-left: 3%;
-    padding-right: 14%;
-}
-#experiencia {
-    margin: 0;
-}
-#experiencia h4{
-    display: flex;
+html {
+    scroll-behavior: smooth;
 }
 
-/*Bloque 3*/
-#bloque_3 {
+/* ===== BLOQUE PRESENTACION ===== */
+#main {
+    max-width: 900px;
+    margin: 20px auto;
     display: flex;
-    border-radius: 15px;
-    border: 3px solid black;
-    gap: 10%;
+    align-items: center;
+    gap: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
+
+/* imagen */
+#img_perfil {
+    flex: 0 0 160px;
+}
+
+#img_perfil img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid #333;
+}
+
+/* texto */
+#texto_perfil {
+    flex: 1;
+}
+
+#texto_perfil h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 38px;
+    letter-spacing: 1px;
+}
+
+#texto_perfil h1 span {
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+#texto_perfil p {
+    margin-top: 10px;
+}
+
+/* ===== BLOQUES GENERALES (columnas CV) ===== */
+#bloque_1,
+#bloque_2,
+#bloque_3 {
+    max-width: 900px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* dos columnas */
+    gap: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+/* estilo base secciones */
+#bloque_1 section,
+#bloque_2 section,
+#bloque_3 section {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* colores por sección */
+#contacto,
 #referencias {
-    display: 1;
     background: #503822;
-    padding-left: 3%;
-    padding-right: 15%;
+    color: white;
 }
+
+#educacion,
+#experiencia {
+    background: #f4f4f4;
+}
+
+#idiomas {
+    background: #856343;
+    color: white;
+}
+
+#habilidades {
+    background: #f4f4f4;
+}
+
+/* ===== TITULOS ===== */
+h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* ===== RESPONSIVE (muy importante) ===== */
+@media (max-width: 768px) {
+
+    #main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #bloque_1,
+    #bloque_2,
+    #bloque_3 {
+        grid-template-columns: 1fr; /* una columna en móvil */
+    }
+}
+
+/* ===== BARRAS DE PROGRESO ===== */
+
+.barra {
+    width: 100%;
+    height: 12px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.progreso {
+    height: 100%;
+    border-radius: 10px;
+    width: 0;
+    animation: llenar 2s forwards;
+}
+
+/* colores según bloque */
+#idiomas .progreso {
+    background: white;
+}
+
+/* niveles */
+.espanol { width: 100%; }
+.ingles { width: 65%; }
+.java { width: 60%; }
+.html { width: 60%; }
+.oracle { width: 35%; }
+
+/* animación */
+@keyframes llenar {
+    from { width: 0; }
+}
+
