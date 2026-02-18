@@ -1,4 +1,6 @@
 body{
+    padding-right: 15%;
+    padding-left: 15%;
     background: #e5e5e5;
     font-family: "Times New Roman", serif;
 }
@@ -7,12 +9,13 @@ body{
 /* bloque presentacion */
 #main {
     margin: 1%;
+    padding-right: 10px;
+    padding-left: 10px;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 3%;
     background-color: gray;
-    padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 /* contenedor imagen */
@@ -30,11 +33,13 @@ body{
 
 /* contenedor texto */
 #texto_perfil {
-    flex: 1; /* ocupa espacio restante */
+    align-items: center;
+    gap: 5%;
+    display: grid;
     background-color: beige;
-    padding: 20px;
-    border-radius: 15px;
-    border: 3px solid #333;
+    padding: 4%;
+    border-radius: 8px;
+    border: 1px solid #333;
 }
 
 /* nombre */
@@ -53,7 +58,12 @@ body{
 
 /* descripción */
 #texto_perfil p {
-    margin-top: 10px;
+    display: flex;
+    text-align: justify;
+    padding-right: 3%;
+    padding-left: 3%;
+    border: 0;
+    margin: 2%;
 }
 
 
@@ -61,6 +71,7 @@ body{
 /* Barra fija arriba */
 .navbar {
     position: sticky;
+    border-radius: 15px;
     top: 1px;
     background: #525252;
     padding: 15px;
@@ -92,9 +103,10 @@ body{
 }
 #contacto {
     display: 1;
+    color: white;
     background: #503822;
     padding-left: 3%;
-    padding-right: 8%;
+    padding-right: 7.7%;
 }
 /*Bloque 2*/
 #bloque_2 {
@@ -104,7 +116,9 @@ body{
     gap: 10%;
 }
 #idiomas {
+    align-items: center;
     display: 1;
+    color: white;
     background: #856343;
     padding-left: 3%;
     padding-right: 14%;
@@ -125,7 +139,15 @@ body{
 }
 #referencias {
     display: 1;
+    color: white;
     background: #503822;
     padding-left: 3%;
     padding-right: 15%;
+}
+@media (max-width: 480px){
+    body {
+        font-size: 15px;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
 }
