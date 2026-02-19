@@ -20,7 +20,7 @@ body{
 
 /* contenedor imagen */
 #img_perfil {
-    flex: 0 0 150px; /* tamaño fijo */
+    flex: 0 0 15%; /*adaptativo*/
 }
 
 /* imagen responsive */
