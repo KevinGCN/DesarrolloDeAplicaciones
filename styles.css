@@ -177,11 +177,14 @@ body{
         font-size: 25px
     }
     .navbar,
-    .barra,
     #bloque_1,
     #bloque_2,
     #bloque_3{
         font-size: 11px;
+    }
+    .barra {
+        width: 100%;
+        height: 2%;
     }
 }
 
