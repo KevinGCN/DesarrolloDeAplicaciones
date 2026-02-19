@@ -165,7 +165,7 @@ body{
     background-color: #d4bf96;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     body {
         padding-right: 5%;
         padding-left: 5%;
@@ -188,7 +188,7 @@ body{
     }
 }
 
-@media (min-width: 501px){
+@media (min-width: 769px){
     body {
         padding-left: 5%;
         padding-right: 5%;
